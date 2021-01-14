@@ -1,0 +1,138 @@
+nav.navbar.navbar-light {
+    background-color: #95bbdf;
+}
+
+span.card-text.country {
+    float: right;
+}
+
+.card-text{
+    margin-left:5px;
+}
+h5 {
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+button.btn.btn-info {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #95bbdf;
+    border-color: #95bbdf;
+    margin:10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+span.card-text i {
+    padding-right: 5px;
+    color: #797878;
+}
+
+
+i.fa.fa-user-plus {
+    font-size: 25px;
+}
+
+input#lname,
+input#fname {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+}
+button.delete {
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    position: absolute;
+    bottom: 50%;
+    right: 5px;
+    border-radius: 40%;
+    opacity:0;
+}
+
+
+.card-title {
+    text-transform: capitalize;
+}
+.control-error {
+    border-color: red;
+}
+
+p.error {
+    display: block;
+    color: red;
+    font-style:italic;
+}
+
+button.delete i, button.user-update i {
+    pointer-events: none;
+}
+.card figure{
+    position:relative;
+    margin-bottom:0;
+}
+
+.card figure:before{
+    content:"";
+    position:absolute;
+    background-color: #1f1e1e;
+    opacity:0;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    transition: opacity 0.3s linear;
+
+}
+button.delete, button.user-update {
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    transition: all 0.3s;
+}
+
+.card:hover:before{
+    opacity:0.5;
+}
+
+.card:hover button.delete {
+    right: 20px;
+    opacity: 1;
+}
+.card:hover button.user-update{
+    right:80px;
+    opacity: 1;
+}
+
+button.user-update{
+    background-color:#117a8b;
+    color:white;
+}
+
+.update-user-popup.show button.update-user-btn, .update-user-popup.show #updateUserLabel{
+    display:block;
+}
+.update-user-popup.show button.save-user, .update-user-popup.show #createUserLabel, .update-user-btn, #updateUserLabel{
+    display:none;
+}
+
+.update-user-popup.show #eid{
+    pointer-events: none;
+    opacity:0.5;
+}
+

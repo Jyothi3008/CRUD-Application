@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>  
+    <link rel="stylesheet" href="main.css">
+    </head>
+<body>
+    <section class="main-section">
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="#">LOGO</a>
+        </nav>
+        <div class="container">
+            <div id="emp-section" class="row pt-5">
+            </div> 
+        </div>
+
+        <button type="button" class="btn btn-info" data-toggle="modal" onclick="newUserPopUp()" data-target="#createUser"><i
+                class="fa fa-user-plus" aria-hidden="true"></i></button>
+
+                <div class="modal fade" id="createUser" tabindex="-1" role="dialog"
+                    aria-labelledby="createUserLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="createUserLabel">New User</h5>
+                                <h5 class="modal-title" id="updateUserLabel">Update User</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Employee Full Name</label>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="text" class="form-control" name="ftname" id="ftname" placeholder="first Name">
+                                                <p id="fnameError" class="error"></p>
+                                            </div>
+                                            <div class="col">
+        
+                                                <input type="text" class="form-control" id="ltname" placeholder="last Name">
+                                                <p id="ltnameError"  class="error"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Employee ID</label>
+                                        <input type="number" class="form-control" name="id", id="eid" placeholder='employee id'>
+                                        <p id="idError"  class="error"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Employee Location</label>
+                                        <select class="form-control" id="newempLocation">
+                                            <option value="OH">OH</option>
+                                            <option value="Twinsburg">Twinsburg</option>
+                                            <option value="Stow">Stow</option>
+                                            
+                                        </select>
+                                        <p id="newempLocationError"  class="error"></p>
+                                    </div>
+                                     <div class="form-group">
+                                         <label for="">Employee Country</label>
+                                         <select class="form-control" id="newempCountry">
+                                             <option value="USA">USA</option>
+                                             <option value="India">India</option>
+                                             <option value="Autralia">Australia</option>
+                                             
+                                         </select>
+                                            <p id="newempCountryError" class="error"></p>
+                                     </div>
+                                     <div class="form-group">
+                                         <label for="">Employee Profile</label>
+                                         <input type="text" class="form-control" id="newempProfile"
+                                             placeholder="Employe Profile">
+                                            <p id="newempProfileError" class="error"></p>
+                                     </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary update-user-btn" onclick="updateUserDetails()">Update</button>
+                                        <button type="button" class="btn btn-primary save-user" onclick="getUserDetails()">Save changes</button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    </section>
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
